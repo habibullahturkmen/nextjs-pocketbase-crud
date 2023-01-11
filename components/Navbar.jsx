@@ -9,7 +9,6 @@ const Navbar = () => {
 
     const { currentUser, logout } = React.useContext(AuthContext);
 
-    console.log("nav currentUser", currentUser)
     return (
         <div className="nav-container">
             <div className="nav-logo-container">
@@ -25,7 +24,7 @@ const Navbar = () => {
                     {
                         currentUser
                             ? (
-                                <Link className="nav-links other-links" href="/dashboard"><h3>Dashboard</h3></Link>
+                                <Link className="nav-links other-links" href="/settings"><h3>Settings</h3></Link>
                             ) : (
                                 <Link className="nav-links other-links" href="/register"><h3>Sign Up</h3></Link>
                             )
