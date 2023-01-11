@@ -30,10 +30,48 @@ a {
   gap: 1em;
 }
 
+.cropper-container {
+  display: flex;
+}
+
+.button-sub-container input {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.button-sub-container span {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.cropper-container div {
+  align-self: center;
+}
+
+.settings-container {
+  display: flex;
+  align-items: flex-start;
+  height: 80vh;
+}
+
+.edit-section {
+  margin-top: 3em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.edit-section label {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 .user-details-container {
   display: flex;
-  /*flex-direction: column;*/
-  /*align-items: center;*/
   margin: 1em 2em;
 }
 
@@ -41,12 +79,10 @@ a {
   display: flex;
   gap: 1em;
   flex-direction: column;
-  /*align-items: center;*/
   margin-top: 2em;
   border: 2px solid #a2a2a2;
   border-radius: 10px;
   padding: 2em;
-  /*width: 20%;*/
 }
 
 .user-details h3 {

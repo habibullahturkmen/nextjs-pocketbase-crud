@@ -68,8 +68,15 @@
   font-weight: 600;
 }
 
-.button:hover {
+.button:hover,
+.settingsbutton:hover {
   cursor: pointer;
+}
+
+.settingsbutton {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 .code {
