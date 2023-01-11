@@ -1,5 +1,6 @@
-import '../styles/globals.css'
+import "../styles/globals.css"
 import "../styles/Navbar.modules.css";
+import "../styles/LoginAndRegister.modules.css";
 
 import {AuthContextProvider} from "../context/authContext";
 
