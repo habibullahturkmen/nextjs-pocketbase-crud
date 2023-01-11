@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="nav-container">
             <div className="nav-logo-container">
                 <Link className="nav-links" href="/">
-                    <Image className="footer-logo-img" src={Logo} alt="Logo"/>
+                    <Image priority className="footer-logo-img" src={Logo} alt="Logo"/>
                 </Link>
             </div>
             <div className="home-signup-login-container">

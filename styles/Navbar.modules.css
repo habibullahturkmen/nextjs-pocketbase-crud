@@ -51,11 +51,13 @@
 
 .logo-img {
     width: 5.5em;
+    height: auto;
     margin-top: 0;
 }
 
 .footer-logo-img {
     width: 3.5em;
+    height: auto;
     margin-top: 0;
 }
 

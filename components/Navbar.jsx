@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="nav-container">
             <div className="nav-logo-container">
                 <Link className="nav-links" href="/">
-                    <Image className="logo-img" src={Logo} alt="Logo"/>
+                    <Image priority className="logo-img" src={Logo} alt="Logo"/>
                 </Link>
             </div>
             <div className="home-signup-login-container">
@@ -27,7 +27,7 @@ const Navbar = () => {
                             ? (
                                 <Link className="nav-links other-links" href="/dashboard"><h3>Dashboard</h3></Link>
                             ) : (
-                                <h3 className="nav-links other-links"><a href="#">Sign Up</a></h3>
+                                <Link className="nav-links other-links" href="/register"><h3>Sign Up</h3></Link>
                             )
                     }
                 </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
                             ? (
                                 <Link className="nav-links other-links" href="/"><h3 onClick={logout}>Logout</h3></Link>
                             ) : (
-                                <h3 className="nav-links other-links"><a href="#">Login</a></h3>
+                                <Link className="nav-links other-links" href="/login"><h3>Login</h3></Link>
                             )
                     }
                 </div>
