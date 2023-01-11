@@ -1,5 +1,4 @@
 import React, {createContext} from "react";
-import axios from "axios";
 import pb from "../lib/pocketbase";
 
 export const AuthContext = createContext();

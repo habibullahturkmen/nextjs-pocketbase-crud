@@ -100,8 +100,6 @@ a {
 .user-details div {
   display: flex;
   gap: 1em;
-  /*height: 4em;*/
-  /*justify-content: center;*/
   align-items: center;
 }
 
@@ -113,7 +111,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*height: 2em;*/
   gap: 2em;
   padding-top: 2em;
 }
@@ -122,4 +119,25 @@ a {
   width: 35px;
   border-radius: 50%;
   margin-top: 0.8em;
+}
+
+@media (max-width: 1000px) {
+  .settings-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cropper-container {
+    flex-direction: column;
+  }
+
+  .settings-container {
+    height: 100%;
+  }
+
+  .edit-section {
+    justify-content: center;
+    align-items: center;
+  }
+
 }

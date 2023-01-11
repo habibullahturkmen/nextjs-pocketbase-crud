@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
-import pb from "../lib/pocketbase";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import {AuthContext} from "../context/authContext";
-import Router from 'next/router'
+import useWindowDimensions from "../lib/useWindowDimensions";
 
 export const Crop = (props) => {
     const [image, setImage] = useState(null);
     const [cropper, setCropper] = useState("");
-
-    const { currentUser, userData, setUserData } = React.useContext(AuthContext);
 
     const uploadToClient = async (e) => {
         e.preventDefault();
@@ -36,9 +32,12 @@ export const Crop = (props) => {
 
     return (
         <div className="cropper-container">
-            <div style={{
-                width: "400px",
-            }}>
+            <div
+                id="cropper-choose-image"
+                style={{
+                    width: useWindowDimensions().width > "1000" ? "400px" : "300px",
+                }}
+            >
                 <br />
                 <br />
                 <div className="button-sub-container">
