@@ -43,6 +43,13 @@ const Navbar = () => {
                             )
                     }
                 </div>
+                <div>
+                    {
+                        currentUser && (
+                            <img className="avatar" src={currentUser && `http://127.0.0.1:8090/api/files/${currentUser.collectionId}/${currentUser.id}/${currentUser.avatar}`} alt=""/>
+                        )
+                    }
+                </div>
             </div>
         </div>
     );

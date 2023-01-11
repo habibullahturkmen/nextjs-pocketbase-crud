@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = React.useState(null);
+    const [userData, setUserData] = React.useState(new FormData());
 
     const login = async (data) => {
         const response = await pb.collection("users").authWithPassword(data.email, data.password);
@@ -26,7 +27,7 @@ export const AuthContextProvider = ({children}) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{currentUser, login, logout, register}}>
+        <AuthContext.Provider value={{currentUser, login, logout, register, userData, setUserData}}>
             {children}
         </AuthContext.Provider>
     );
