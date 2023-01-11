@@ -1,0 +1,80 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3.375em 1em 4.56em;
+    background-color: #ECEEF8;
+}
+
+.home-signup-login-container {
+    display: flex;
+    gap: 1em;
+}
+
+.hr-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-signup-login-container hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+    width: 2em;
+    margin: -1em;
+}
+
+.nav-links h3,
+.nav-links a {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    line-height: 24px;
+    border: 2px solid #ECEEF8;
+    padding: 0.1em 0.2em;
+}
+
+.nav-links h3:hover,
+.nav-links a:hover{
+    opacity: 0.5;
+}
+
+.nav-links,
+.nav-links h3,
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a {
+    display: block;
+}
+
+.logo-img {
+    width: 5.5em;
+    margin-top: 0;
+}
+
+.footer-logo-img {
+    width: 3.5em;
+    margin-top: 0;
+}
+
+.other-links {
+    opacity: 0.5;
+}
+
+@media (max-width: 567px) {
+    .nav-container {
+        padding: 1em;
+    }
+
+    .logo-img {
+        padding-top: 0.22em;
+        width: 2.8em;
+    }
+
+    .footer-logo-img {
+        padding-top: 0.3em;
+        width: 2.5em;
+    }
+}

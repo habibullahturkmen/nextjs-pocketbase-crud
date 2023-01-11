@@ -15,12 +15,32 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.box {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.img-preview {
+  overflow: hidden;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.selection-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 2em;*/
+  gap: 2em;
+  padding-top: 2em;
 }
