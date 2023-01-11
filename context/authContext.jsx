@@ -9,7 +9,11 @@ export const AuthContextProvider = ({children}) => {
 
     const login = async (data) => {
         const response = await pb.collection("users").authWithPassword(data.email, data.password);
-        setCurrentUser(response.record);
+        setCurrentUser(JSON.parse(localStorage.getItem("pocketbase_auth")) && JSON.parse(localStorage.getItem("pocketbase_auth")).model)
+    }
+
+    const register = async (data) => {
+        await pb.collection('users').create(data);
     }
 
     const logout = async () => {
@@ -18,12 +22,11 @@ export const AuthContextProvider = ({children}) => {
     }
 
     React.useEffect(() => {
-        // localStorage.setItem("user", JSON.stringify((currentUser)));
         setCurrentUser(JSON.parse(localStorage.getItem("pocketbase_auth")) && JSON.parse(localStorage.getItem("pocketbase_auth")).model)
     }, []);
 
     return (
-        <AuthContext.Provider value={{currentUser, login, logout}}>
+        <AuthContext.Provider value={{currentUser, login, logout, register}}>
             {children}
         </AuthContext.Provider>
     );

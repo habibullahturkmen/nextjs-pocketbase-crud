@@ -1,25 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router'
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import pb from "../lib/pocketbase";
 import {AuthContext} from "../context/authContext";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
-const Register = () => {
+const Login = () => {
 
     const [inputs, setInputs] = React.useState({
-        username: "",
         email: "",
         password: "",
-        passwordConfirm: "",
     });
     const [error, setError] = React.useState(null);
 
     const router = useRouter();
 
-    const { currentUser, register } = React.useContext(AuthContext);
+    const { currentUser, login } = React.useContext(AuthContext);
 
     React.useEffect(() => {
         const check = async () => {
@@ -42,11 +38,10 @@ const Register = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await register(inputs);
-            await router.push("/login");
+            await login(inputs);
+            await router.push("/");
         } catch (err) {
-            console.log(err)
-            setError("invalid info, check and try again");
+            setError("invalid email or password, try again");
         }
     }
 
@@ -54,43 +49,27 @@ const Register = () => {
         <>
             <Navbar />
             <div className="auth">
-                <h1>Register</h1>
+                <h1>Login</h1>
                 <form onSubmit={handleSubmit}>
                     <input
-                        required
-                        type="text"
-                        placeholder="username"
-                        name="username"
-                        onChange={handleChange}
-                    />
-                    <input
-                        required
-                        type="email"
+                        required type="text"
                         placeholder="email"
                         name="email"
                         onChange={handleChange}
                     />
                     <input
-                        required
-                        type="password"
+                        required type="password"
                         placeholder="password"
                         name="password"
-                        onChange={handleChange}
-                    />
-                    <input
-                        required
-                        type="password"
-                        placeholder="confirm password"
-                        name="passwordConfirm"
                         onChange={handleChange}
                     />
                     <button
                         type="submit"
                     >
-                        Register
+                        Login
                     </button>
                     {error && <p>{error}</p>}
-                    <span>Have an account? <Link href="/login">Login</Link></span>
+                    <span>Don&apos;t have an account? <Link href="/register">Register</Link></span>
                 </form>
             </div>
             <Footer />
@@ -98,4 +77,4 @@ const Register = () => {
     );
 }
 
-export default Register;
+export default Login;
