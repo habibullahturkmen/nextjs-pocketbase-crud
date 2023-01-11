@@ -14,7 +14,7 @@ const Footer = () => {
                 </Link>
             </div>
             <div className="home-signup-login-container">
-                    <span>Made with ❤️ and <strong>Next.js</strong>.</span>
+                    <span>Made with ❤️, <strong>Next.js</strong> and <strong>Pocketbase</strong>.</span>
             </div>
         </div>
     );

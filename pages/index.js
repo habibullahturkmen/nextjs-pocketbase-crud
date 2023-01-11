@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Nextjs from "../public/nextjs-icon.png";
+import Pocketbase from "../public/pocketbase-icon.png";
 
 export default function Home() {
   return (
@@ -17,9 +19,12 @@ export default function Home() {
 
       <main className={styles.main}>
           <h1 className={styles.title}>
-              CRUD Task built with <br/> <a href="https://nextjs.org">Next.js</a> and <a href="https://pocketbase.io">Pocketbase</a>
+              Fully Responsive CRUD App built with <br/>
+              <a className={styles.logo} href="https://nextjs.org"><Image src={Nextjs} alt={Nextjs} /></a> and
+              <a className={styles.logo} href="https://pocketbase.io"><Image src={Pocketbase} alt={"Pocketbase"} /></a>
           </h1>
           <h6 className={styles.description}>You can register new users, login, add profile image 2x2, and change other user settings</h6>
+          <p className={styles.description}>Work in progress</p>
       </main>
 
         <Footer />
